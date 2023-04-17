@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/about.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+
+</head>
+<body>
+
+    <!-- Nav bar -->
+
+  <nav class="navbar">
+    
+    <div class="nav-links">
+        <a href="#" class="logo"></a>
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#">AI</a></li>
+        <li><a href="#">Games</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#contact_id">Contact</a></li>
+      </ul>
+    </div>
+    <img src="Images\menu-btn2.png" alt="" class="menu-btn">
+  </nav>
+ 
+
+<!-- End of nav-->
+
+    
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <!--<div class="title">
+                    <h1>About Me</h1>
+                </div>-->
+                <div class="content">
+                    <h3>Zahra Aljanabi </h3>
+                    <br><br>
+                    <p><img src="Images/logo1.png" class="left-img">I graduated from Imam Abdulrahman Bin Faisal University 
+                         with bachelor degree in Artificial Intelligence.<p/>
+                    <br>
+                    <p><img src="Images/sda3.png" class="sda-img">I studied Game Development at Saudi Digital Academy and developed several complete 3D and 2D games.</p>
+                    <br>
+                    <p><img src="Images/aii6.png" class="left-img">I have done several projects related to my major, which can be applied on real life systems to facilitate human’s life.
+                    <br>
+                    
+                   
+                    <br><br><a href="cv.pdf" role="button" download class="download-btn">Download CV</a>
+                </div>
+                
+            </div>
+            <div class="image-section">
+              <!-- <img src="Images/me2.png" alt="">-->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+</body>
+<script>
+
+    const menuBtn = document.querySelector(".menu-btn")
+    const navLinks = document.querySelector(".nav-links")
+  
+    menuBtn.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+  
+  </script>
+</html>
