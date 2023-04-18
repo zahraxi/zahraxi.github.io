@@ -159,6 +159,9 @@
       font-size: 1rem;
     }
 
+    .img-content{
+      z-index: 0;
+    }
     .txt1{
       font-size: 5rem;
       font-family: 'Merriweather', sans-serif;
@@ -170,9 +173,7 @@
       
     
     }
-    .img-content{
-      z-index: 0;
-    }
+ 
     .txt2{
       font-size: 2rem;
       text-align: center;
