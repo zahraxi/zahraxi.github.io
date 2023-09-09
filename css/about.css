@@ -6,166 +6,199 @@
     font-family: 'Merriweather', sans-serif;
     text-decoration: none;
     list-style: none;
+   
+
   
    }
 
-body{
-    background-size: cover;
-    background-color:rgba(247, 184, 238, 0.16);
-    z-index: 3;
-}
-
-.section{
-    width: 100%;
-    height: 150vh;
-    min-height: 150vh;
-    /*background-image: url(../Images/pink.jpg);*/
-  
-}
-.container{
-    width: 80%;
-    display: block;
-    margin: auto;
-    padding-top: 100px;
-}
-
-.content-section{
-    float: left;
-    width: 55%;
-}
-
-.image-section{
-    float: right;
-    width: 40%;
-}
-
-.image-section img{
-    width: 70%;
-    height: auto;  
-    opacity: 1;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: grayscale(10%);
-}
-
-.content-section .title{
-    text-transform: uppercase;
-    font-size: 25px;
-}
-
-.content-section .content h3{
-    margin-top:60px;
-    margin-left: 100px;
-    font-size: 40px;
-    color: #ebafc3;
-  
-}
-
-.content-section .content p{
-    margin:10px ;
-    font-family: sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
+   /* start of new generated code */
+/* Apply these styles for screens with a width of 768px or wider (adjust as needed) */
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
     padding: 0;
-    width: 100%;
-    
-}
-.left-img{
- float: left;  
- margin: 9px;
- width: 17%;
- margin-right:15px;
- margin-top: auto;
- padding: 10;
-}
+    background: linear-gradient(90deg, #ffffff, #e0e0e0);
+  }
 
-.sda-img{
-    float: left;  
-    margin: 9px;
-    width: 20%;
-    margin-right:15px;
-    margin-top: auto;
-    padding: 10;
-   }
+  .section {
+    display: flex;
+    align-items: center; /* Center vertically within the section */
+    justify-content: center; /* Center horizontally within the section */
+    min-height: 100vh; /* Ensure the container fills the entire viewport height */
+  }
 
-
-.download-btn {
-  background: #ebafc3;
-  box-shadow: #ebafc3 0 10px 20px -10px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 8px 18px;
-  margin-top: 20px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-  word-break: break-word;
-  border: 0;
-  text-decoration: none;
+  .container {
+    display: flex;
+    /* Add a barely visible green gradient background */
+    background: linear-gradient(90deg, rgba(0, 255, 0, 0.014), rgba(0, 128, 0, 0.1));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 150px;
+    margin-bottom: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px;
+  }
   
+  
+
+  .content-section {
+    display: flex; /* Enable flex layout for content-section */
+    align-items: center; /* Center vertically within the content-section */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the content horizontally */
+  }
+
+  .image-section {
+    flex: 1;
+    text-align: center;
+    
+  }
+  /* Add this CSS to position paragraphs to the right of images */
+.image-and-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Add spacing between image-text pairs */
+}
+
+.image-and-text img {
+  max-width: 100px;
+  height: auto;
+  padding-right: 20px; /* Add spacing between image and text */
+}
+
+.content h3 {
+  font-size: 36px; /* Increase font size */
+  font-weight: bold;
+  color: #2C3B59;
+  text-align: center; /* Center the text horizontally */
+  animation: fadeIn 1s; /* Add fadeIn animation */
+  opacity: 1; /* Ensure the h3 remains visible after animation */
+  padding: 30px;
 }
 
 
 
 
 
-@media screen and (max-width:768px) {
-    .container{
-        width: 80%;
-        display: block;
-        margin: auto;
-        padding-top: 50px;
-    }
-
-    .content-section{
-        float: left;
-        width: 100%;
-        display: block;
-        margin: auto;
-    }
-
-    .image-section{
-        float: left;
-        width: 100%;
-        display: block;
-        margin: auto;
-    }
-    .left-img {
-        width:100%;
-        display: block;
-        text-align: center;
-        padding: 90px;
-        margin: 2px;
-
-        
-    }
-    .sda-img{
-        width:100%;
-        display: block;
-        align-items: center;
-        padding: 90px;
-        margin: 2px;
-    }
-
-    .content-section .title{
-        text-align: center;
-        font-size: 19px;
-    }
-    .content h3{
-        position: absolute;
-        
-    }
- 
-
+/* Adjust the image-and-text layout */
+.image-and-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center; /* Center the content horizontally */
 }
+
+.image-and-text img {
+  max-width: 100px;
+  height: auto;
+  padding-right: 20px;
+}
+
+.left-img,
+.sda-img {
+  max-width: 100%;
+  height: auto;
+  width: 100px;
+  height: 100px;
+  animation: fadeIn 1s; /* Add fadeIn animation */
+  padding: 15px;
+}
+
+
+  .content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    animation: fadeIn 1s;
+    color: #2C3B59; /* Text color */
+    flex: 1; /* Expand the text section to take available space */
+    padding: 20px;
+  }
+}
+
+
+/* Center the .download-btn element */
+.download-btn {
+  display: block; /* Change from inline-block to block to center it */
+  margin: 0 auto; /* Center horizontally */
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  background-color: #495B73;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 1s;
+  width: 20%;
+}
+
+
+
+.download-btn:hover {
+  background-color: #F2BD9B;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Reset styles for screens narrower than 768px */
+@media screen and (max-width: 767px) {
+  body {
+    background: linear-gradient(90deg, #ffffff, #e0e0e0);
+    padding: 20px;
+  }
+
+  .section {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  .container {
+    text-align: left; /* Align the content inside the container to the left on mobile screens */
+    margin-top: 20px; /* Add margin to the top of the container */
+    margin-bottom: 20px; /* Add margin to the bottom of the container */
+  }
+
+  .download-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+
+   /* end of new generated code */
+
+
+
+
+
+   /* start of old code */
+
+
+
+
+/* end of old code */
+
+
+
+
+
+
 
 /*  NAV BAR */
 .navbar {
