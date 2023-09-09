@@ -179,12 +179,23 @@
 </body>
 <script>
 
-  const menuBtn = document.querySelector(".menu-btn")
-  const navLinks = document.querySelector(".nav-links")
+  const menuButton = document.querySelector('.menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  const body = document.body;
+  const overlay = document.querySelector('.overlay');
 
-  menuBtn.addEventListener('click',()=>{
-  navLinks.classList.toggle('mobile-menu')
-  })
+  menuButton.addEventListener('click', () => {
+    navLinks.classList.toggle('mobile-menu');
+    body.classList.toggle('menu-opened');
+  });
+
+  // Close the mobile menu when clicking outside of it
+  document.addEventListener('click', (e) => {
+    if (!menuButton.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove('mobile-menu');
+      body.classList.remove('menu-opened');
+    }
+  });
 
 </script>
 
