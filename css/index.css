@@ -10,6 +10,7 @@ body {
   font-family: 'Merriweather', sans-serif;
 }
 
+
 header {
   height: 100vh;
   background-image: url(../Images/code5.jpg);
@@ -131,6 +132,9 @@ header {
   .navbar {
       padding: 0;
   }
+  body.menu-opened {
+    backdrop-filter: blur(10px);
+  }
 
   .navbar .logo {
       position: absolute;
@@ -143,20 +147,21 @@ header {
   }
 
   .nav-links {
-      top: 0;
-      left: 0;
-      position: absolute;
-      backdrop-filter: blur(10px);
-      background-color: rgba(236, 236, 241, 0.692);
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: -100%;
-      transition: all 0.5s ease;
-      z-index: 2;
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* backdrop-filter: blur(10px); Remove this line */
+    background-color: rgba(236, 236, 241, 0.692);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+    z-index: 2;
   }
+  
 
   .nav-links.mobile-menu {
       margin-left: 0;
