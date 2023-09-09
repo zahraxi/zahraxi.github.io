@@ -179,15 +179,12 @@
 </body>
 <script>
 
-  const menuButton = document.querySelector('.menu-btn');
-const navLinks = document.querySelector('.nav-links');
-const body = document.body;
+  const menuBtn = document.querySelector(".menu-btn")
+  const navLinks = document.querySelector(".nav-links")
 
-menuButton.addEventListener('click', () => {
-  navLinks.classList.toggle('mobile-menu');
-  body.classList.toggle('menu-opened'); // Toggle the menu-opened class on the body
-});
-
+  menuBtn.addEventListener('click',()=>{
+  navLinks.classList.toggle('mobile-menu')
+  })
 
 </script>
 
