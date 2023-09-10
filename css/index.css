@@ -201,6 +201,7 @@
       left: 0;
       position: absolute;
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); /* For Safari */
       background-color: rgba(236, 236, 241, 0.692);
       width: 100%;
       height:100vh ;
@@ -304,7 +305,7 @@
    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff0000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
  }
   #projects {
-    background-color:#d9bfd21d ;
+    background-color:#bfd9ce1d ;
     padding-top: 100px ;
     padding-bottom:100px;
   }
