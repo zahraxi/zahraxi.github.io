@@ -83,10 +83,10 @@
 
     .left-img,
     .sda-img {
-        max-width: 100%;
-        height: auto;
-        width: 100px;
-        height: 100px;
+        max-width: 100% !important;
+        height: auto !important;
+        width: 105px !important;
+        height: 105px !important;
         animation: fadeIn 1s;
         padding: 15px;
     }
