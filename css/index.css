@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Merriweather', sans-serif;
+  margin: 0; /* Remove default body margin */
 }
 
 header {
@@ -90,11 +91,12 @@ header {
 .navbar {
   position: absolute;
   padding: 50px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  z-index: 1;
+  z-index: 10;
 }
 
 .navbar a {
@@ -125,72 +127,7 @@ header {
   top: 50px;
   right: 50px;
   width: 35px;
-}
-
-@media screen and (max-width: 900px) {
-  .navbar {
-    padding: 0;
-  }
-
-  .navbar .logo {
-    position: absolute;
-    top: 40px;
-    left: 30px;
-  }
-
-  .navbar .menu-btn {
-    display: block;
-  }
-
-  .nav-links {
-    top: 0;
-    left: 0;
-    position: absolute;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(236, 236, 241, 0.692);
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -100%;
-    transition: all 0.5s ease;
-    z-index: 2;
-  }
-
-  .nav-links.mobile-menu {
-    margin-left: 0;
-  }
-
-  .nav-links ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar .nav-links ul li {
-    margin: 25px;
-    font-size: 1rem;
-  }
-
-  .img-content {
-    z-index: 0;
-  }
-
-  .txt1 {
-    font-size: 5rem;
-    text-align: center;
-    z-index: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-
-  .txt2 {
-    font-size: 2rem;
-    text-align: center;
-    opacity: 0.7;
-    z-index: 0;
-  }
+  cursor: pointer;
 }
 
 h1 {
@@ -223,16 +160,16 @@ h3 {
 /* Middle container */
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-  width: 30px;
-  height: 30px;
-  margin-left: -20px; /* Move even closer to the image */
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
 }
 
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-  width: 30px;
-  height: 30px;
-  margin-right: -20px; /* Move even closer to the image */
+  width: 20px;
+  height: 20px;
+  margin-right: -10px;
 }
 
 #projects {
@@ -264,6 +201,7 @@ h3 {
 .contact-me {
   width: 50%;
   margin: 30px auto 30px auto;
+  text-align: justify;
 }
 
 .contact-heading {
@@ -307,24 +245,12 @@ hr {
 .contact-message {
   width: 60%;
   margin: 60px auto 60px;
+  text-align: justify;
 }
 
-.skill-row {
-  margin: 100px auto 100px auto;
-  width: 50%;
-  text-align: left;
-}
-
-.skills-imgs {
-  width: 25%;
-  float: left;
-  margin-right: 30px;
-}
-
-.penImage {
-  width: 25%;
-  float: right;
-  margin-left: 30px;
+.btn-container {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .btn {
@@ -345,4 +271,229 @@ hr {
   background: #30e3cb;
   background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
   text-decoration: none;
+}
+
+.skill-row {
+  margin: 100px auto 100px auto;
+  width: 50%;
+  text-align: left;
+}
+
+.skills-imgs {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+
+.penImage {
+  width: 25%;
+  float: right;
+  margin-left: 30px;
+}
+
+/* Enhanced Mobile Responsiveness */
+@media screen and (max-width: 900px) {
+  .navbar {
+    padding: 20px;
+    display: block;
+  }
+
+  .navbar .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .navbar .menu-btn {
+    display: block;
+    top: 20px;
+    right: 20px;
+    z-index: 20; /* Above nav-links */
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Back to viewport height for full coverage */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(236, 236, 241, 0.692);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+    z-index: 15; /* Above navbar but below menu-btn */
+  }
+
+  .nav-links.mobile-menu {
+    margin-left: 0;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .nav-links ul li {
+    margin: 25px;
+    font-size: 1rem;
+  }
+
+  /* Hide logo when menu is open */
+  .nav-links.mobile-menu ~ .logo {
+    display: none;
+  }
+}
+
+/* Remove white border globally */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .txt1 {
+    font-size: 3rem;
+    letter-spacing: 8px;
+    text-align: center;
+  }
+
+  .txt2 {
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .img-content {
+    width: 90%;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .projects-text {
+    font-size: 1.8rem;
+  }
+
+  .projects-image {
+    width: 15%;
+    margin: 15px;
+  }
+
+  .profile-pic {
+    width: 15%;
+  }
+
+  .intro {
+    width: 85%;
+  }
+
+  .contact-me {
+    width: 85%;
+    text-align: justify;
+  }
+
+  .contact-message {
+    width: 85%;
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .skill-row {
+    width: 85%;
+  }
+
+  .skills-imgs,
+  .penImage {
+    width: 35%;
+    float: none;
+    margin: 15px auto;
+    display: block;
+  }
+
+  .bottom-cloud,
+  .top-cloud {
+    width: 12%;
+    left: 10%;
+    right: 10%;
+  }
+
+  .bottom-cloud {
+    bottom: 20px;
+  }
+
+  .top-cloud {
+    top: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  hr {
+    width: 8%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .txt1 {
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  .txt2 {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .projects-image {
+    width: 20%;
+  }
+
+  .profile-pic {
+    width: 20%;
+  }
+
+  .skills-imgs,
+  .penImage {
+    width: 50%;
+  }
+
+  .bottom-cloud,
+  .top-cloud {
+    width: 10%;
+  }
 }
