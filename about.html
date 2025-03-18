@@ -1,101 +1,66 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About - Zahra Aljanabi</title>
     <link rel="stylesheet" href="css/about.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
-
 </head>
 <body>
-
-    <!-- Nav bar -->
-
-  <nav class="navbar">
-    
-    <div class="nav-links">
-        <a href="#" class="logo"></a>
-      <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="#">AI</a></li>
-        <li><a href="#">Games</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="index.html#contact_id">Contact</a></li>
-      </ul>
-    </div>
-    <img src="Images\menu-btn2.png" alt="" class="menu-btn">
-  </nav>
- 
-
-<!-- End of nav-->
-
-
-<div class="section">
-  <div class="container">
-    <div class="content-section">
-      <!--<div class="title">
-          <h1>About Me</h1>
-      </div>-->
-      <div class="content">
-        <h3>I'm Zahra Aljanabi</h3>
-        <br><br>
-
-        <!-- First Image and Paragraph -->
-        <div class="image-and-text">
-          <img src="Images/logo1.png" class="left-img">
-          <p>In 2021, I completed a Bachelor of Science degree in Artificial Intelligence from Imam Abdulrahman Bin Faisal University</p>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">Zahra</a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ai_projects.html">AI</a></li>
+                <li><a href="#">Games</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="index.html#contact_id">Contact</a></li>
+            </ul>
         </div>
+        <img src="Images/menu-btn2.png" alt="Menu Toggle" class="menu-btn">
+    </nav>
 
-        <!-- Second Image and Paragraph -->
-        <div class="image-and-text">
-          <img src="Images/sda3.png" class="sda-img">
-          <p>I studied Game Development at Saudi Digital Academy and developed several fully-featured 3D and 2D games.</p>
-        </div>
+    <!-- Main Content -->
+    <main>
+        <section class="about-section">
+            <header class="about-header">
+                <h1>About Me</h1>
+                <h2>Zahra Aljanabi</h2>
+                <p class="bio">AI Software Developer </p>
+            </header>
+            <div class="about-content">
+                <div class="info-item">
+                    <img src="Images/logo1.png" alt="University Logo" class="info-icon">
+                    <p>In 2021, I earned a Bachelor of Science in Artificial Intelligence from Imam Abdulrahman Bin Faisal University.</p>
+                </div>
+                <div class="info-item">
+                    <img src="Images/sda3.png" alt="Saudi Digital Academy Logo" class="info-icon">
+                    <p>I studied Game Development at Saudi Digital Academy, creating several 3D and 2D games.</p>
+                </div>
+                <div class="info-item">
+                    <img src="Images/ai0.png" alt="AI Project Icon" class="info-icon">
+                    <p>My AI projects focus on practical solutions to enhance real-world systems and human life.</p>
+                </div>
+                <a href="cv.pdf" download class="action-btn">Download CV</a>
+            </div>
+        </section>
+    </main>
 
-        <!-- Third Image and Paragraph -->
-        <div class="image-and-text">
-          <img src="Images/ai0.png" class="left-img">
-          <p>I have done several projects related to my major, all of which have practical applications in improving real-world systems and enhancing the quality of human life.</p>
-        </div>
-
-        <br><br>
-        <a href="cv.pdf" role="button" download class="download-btn">Download CV</a>
-      </div>
-    </div>
-    <div class="image-section">
-      <!-- <img src="Images/me2.png" alt=""> -->
-    </div>
-  </div>
-</div>
-
-
-
-
-
-    
+    <script>
+        const menuButton = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        menuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-menu');
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuButton.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('mobile-menu');
+            }
+        });
+    </script>
 </body>
-<script>
-
-  const menuButton = document.querySelector('.menu-btn');
-  const navLinks = document.querySelector('.nav-links');
-  const body = document.body;
-  const overlay = document.querySelector('.overlay');
-
-  menuButton.addEventListener('click', () => {
-    navLinks.classList.toggle('mobile-menu');
-    body.classList.toggle('menu-opened');
-  });
-
-  // Close the mobile menu when clicking outside of it
-  document.addEventListener('click', (e) => {
-    if (!menuButton.contains(e.target) && !navLinks.contains(e.target)) {
-      navLinks.classList.remove('mobile-menu');
-      body.classList.remove('menu-opened');
-    }
-  });
-  
-  </script>
 </html>

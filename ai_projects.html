@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AI Projects</title>
+    <link rel="stylesheet" href="css/ai.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">Zahra</a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="ai_projects.html">AI</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#contact_id">Contact</a></li>
+            </ul>
+        </div>
+        <img src="Images/menu-btn.png" alt="Menu Toggle" class="menu-btn">
+    </nav>
+
+    <!-- AI Projects Section -->
+    <section class="ai-projects">
+        <h1>AI Projects</h1>
+        <div class="projects-container">
+            <!-- Project 1: Diabetes Prediction -->
+            <div class="project-card">
+                <div class="card-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h2>Diabetes Prediction</h2>
+                <div class="description-box">
+                    <p>Project Description</p>
+                </div>
+                <p class="description">Predict the likelihood of diabetes using health parameters such as glucose level, blood pressure, BMI, and more.</p>
+                <a href="https://diabetes-prediction-prob.onrender.com" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 2: Placeholder -->
+            <div class="project-card">
+                <h2>Project 2</h2>
+                <a href="#" class="disabled-link">To Be Published</a>
+            </div>
+
+            <!-- Project 3: Placeholder -->
+            <div class="project-card">
+                <h2>Project 3</h2>
+                <a href="#" class="disabled-link">To Be Published</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const menuButton = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        menuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-menu');
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuButton.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('mobile-menu');
+            }
+        });
+    </script>
+</body>
+</html>
