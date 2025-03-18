@@ -156,7 +156,7 @@ body {
 }
 
 .project-card a {
-  background-color: #021a30ed; /* Changed to a teal color */
+  background-color: #000911ed; /* Changed to a teal color */
   color: white;
   padding: 8px 15px; /* Reduced padding for smaller size */
   border-radius: 6px; /* Slightly smaller radius */
