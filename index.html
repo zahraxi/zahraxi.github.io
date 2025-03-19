@@ -92,32 +92,29 @@
     </div>
   </div>
 
-</body>
-<script>
-  const menuBtn = document.querySelector('.menu-btn');
-  const navLinks = document.querySelector('.nav-links');
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
 
-  // Toggle menu on button click
-  menuBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    navLinks.classList.toggle('mobile-menu');
-    console.log('Menu toggled:', navLinks.classList.contains('mobile-menu') ? 'Open' : 'Closed');
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!menuBtn.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('mobile-menu')) {
-      navLinks.classList.remove('mobile-menu');
-      console.log('Menu closed (outside click)');
-    }
-  });
-
-  // Close menu when clicking a nav link
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('mobile-menu');
-      console.log('Menu closed (nav link click)');
+    // Toggle menu on button click
+    menuBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      navLinks.classList.toggle('mobile-menu');
     });
-  });
-</script>
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!menuBtn.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('mobile-menu');
+      }
+    });
+
+    // Close menu when clicking a nav link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile-menu');
+      });
+    });
+  </script>
+</body>
 </html>

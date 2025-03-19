@@ -200,78 +200,94 @@ body {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 900px) {
-  .navbar {
-      padding: 10px 20px;
-  }
-
-  .navbar .logo {
-      font-size: 1.4rem;
-  }
-
-  .navbar .menu-btn {
-      display: block;
-  }
-
-  .navbar .nav-links {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100vh;
-      background: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: left 0.3s ease;
-  }
-
-  .navbar .nav-links.mobile-menu {
-      left: 0;
-  }
-
-  .navbar .nav-links ul {
-      flex-direction: column;
-      gap: 20px;
-  }
-
-  .navbar .nav-links a {
-      font-size: 1.1rem;
-  }
-
-  .navbar .nav-links li {
-      animation: none; /* Disable animation for mobile menu */
-  }
-
-  .about-section {
-      flex-direction: column;
-  }
-
-  .about-header {
-      max-width: 100%;
-      text-align: center;
-      padding: 30px 20px;
-  }
-
-  .about-header .bio {
-      text-align: center;
-  }
-
-  .about-content {
-      padding: 20px;
-  }
-
-  .info-item {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .info-icon {
-      margin-right: 0;
-      margin-bottom: 15px;
-  }
+/* Add this outside the media query to style the active link globally */
+.navbar .nav-links ul .active a {
+  color:  #F2A2A2;  /* Match the green from index.html */
+  font-weight: 600; /* Match the bold style from index.html */
 }
 
+/* Updated media query for small screens */
+@media screen and (max-width: 900px) {
+.navbar {
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 1.4rem;
+}
+
+.navbar .menu-btn {
+    display: block;
+}
+
+.navbar .nav-links {
+    position: fixed;
+    top: 60px; /* Match index.html position */
+    left: auto; /* Not full-screen */
+    right: 10px; /* Match index.html position */
+    width: auto; /* Match index.html compact size */
+    height: auto; /* Match index.html compact size */
+    background-color: rgba(236, 236, 241, 0.692); /* Match index.html background */
+    backdrop-filter: blur(10px); /* Match index.html blur */
+    -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+    background-color: rgba(0, 0, 0, 0.045); /* Fallback darker background if blur fails */
+    display: none; /* Hide by default */
+    flex-direction: column; /* Vertical layout */
+    align-items: center;
+    padding: 10px; /* Add padding for spacing */
+    z-index: 15; /* Above navbar but below menu-btn */
+    transition: opacity 0.3s ease; /* Smooth fade */
+    opacity: 0; /* Start hidden */
+}
+
+.navbar .nav-links.mobile-menu {
+    display: flex; /* Show when toggled */
+    opacity: 1; /* Fade in */
+}
+
+.navbar .nav-links ul {
+    flex-direction: column; /* Ensure vertical list */
+    gap: 20px; /* Match index.html gap */
+    width: 100%; /* Full width within the container */
+}
+
+.navbar .nav-links a {
+    font-size: 1.1rem; /* Match index.html font size */
+    color: #000000; /* Black text for all links */
+}
+
+.navbar .nav-links li {
+    animation: none; /* Disable animation for mobile menu, like index.html */
+}
+
+.about-section {
+    flex-direction: column;
+}
+
+.about-header {
+    max-width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.about-header .bio {
+    text-align: center;
+}
+
+.about-content {
+    padding: 20px;
+}
+
+.info-item {
+    flex-direction: column;
+    text-align: center;
+}
+
+.info-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+}
 @media screen and (max-width: 600px) {
   .about-header h1 {
       font-size: 1.8rem;

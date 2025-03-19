@@ -313,34 +313,40 @@ hr {
 
   .nav-links {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Back to viewport height for full coverage */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(236, 236, 241, 0.692);
-    display: flex;
+    top: 60px; /* Changed to AI Projects position */
+    left: auto; /* Not full-screen */
+    right: 10px; /* Changed to AI Projects position */
+    width: auto; /* Not full-screen */
+    height: auto; /* Not full-screen */
+    background-color: rgba(236, 236, 241, 0.692); /* Original background */
+    backdrop-filter: blur(10px); /* Original blur */
+    -webkit-backdrop-filter: blur(10px); /* Original blur for Safari */
+    background-color: rgba(0, 0, 0, 0.5); /* Fallback darker background if blur fails */
+    display: none; /* Hide by default */
     justify-content: center;
     align-items: center;
-    margin-left: -100%;
-    transition: all 0.5s ease;
+    margin-left: -100%; /* Original slide effect */
+    transition: all 0.5s ease; /* Original slide effect */
     z-index: 15; /* Above navbar but below menu-btn */
+    padding: 10px; /* Add padding to give the menu some space */
   }
 
   .nav-links.mobile-menu {
-    margin-left: 0;
+    margin-left: 0; /* Original slide effect */
+    display: flex; /* Show when toggled */
   }
 
   .nav-links ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Vertical list from AI Projects */
     align-items: center;
+    gap: 20px; /* From AI Projects */
+    width: 100%; /* Ensure the ul takes full width of its parent */
   }
 
   .navbar .nav-links ul li {
-    margin: 25px;
-    font-size: 1rem;
+    margin: 0; /* Reset margin for vertical layout */
+    font-size: 1.1rem; /* From AI Projects */
   }
 
   /* Hide logo when menu is open */
