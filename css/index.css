@@ -48,7 +48,6 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .txt2 {
@@ -81,6 +80,36 @@ header {
   0% {
     opacity: 0;
     transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Redesigned styles for animated info items with matching colors */
+.info-container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px; /* Limits width for better readability */
+}
+
+.info-item:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.info-item:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.info-item:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
   }
   100% {
     opacity: 1;
@@ -383,6 +412,16 @@ html, body {
     text-align: center;
   }
 
+  .info-container {
+    max-width: 100%;
+  }
+
+  .info-item {
+    font-size: 1rem;
+    text-align: center;
+    padding: 8px 10px;
+  }
+
   h1 {
     font-size: 2.5rem;
   }
@@ -474,6 +513,10 @@ html, body {
   }
 
   .txt2 {
+    font-size: 0.9rem;
+  }
+
+  .info-item {
     font-size: 0.9rem;
   }
 
