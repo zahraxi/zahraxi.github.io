@@ -91,7 +91,7 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   width: 300px;
   padding: 20px;
-  text-align: center;
+  text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: 380px;
@@ -119,21 +119,25 @@ body {
   color: #4CAF50;
   font-size: 1.5rem;
   margin-bottom: 10px;
-  text-align: left;
   margin-left: 10px;
+}
+
+/* Description Wrapper */
+.description-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 15px;
 }
 
 /* Description Box */
 .description-box {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 5px 10px;
-  margin-bottom: 15px;
   border-radius: 6px;
   font-family: 'Merriweather Sans', sans-serif;
   display: inline-block;
-  text-align: left;
-  margin-left: 10px;
-  float: left;
 }
 
 .description-box p {
@@ -143,36 +147,83 @@ body {
   line-height: 1.4;
 }
 
+.info-mark {
+  font-size: 1rem;
+  color: #4CAF50;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.info-mark:hover {
+  color: #66BB6A;
+}
+
+.disclaimer {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  z-index: 10;
+  width: 220px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.disclaimer.visible {
+  display: block;
+}
+
 .project-card p.description {
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #ddd;
   margin-bottom: 20px;
-  text-align: left;
   margin-left: 10px;
   margin-right: 10px;
   clear: both;
 }
 
 .project-card a {
-  background-color: #000911ed; /* Changed to a teal color */
+  background-color: #000911ed;
   color: white;
-  padding: 8px 15px; /* Reduced padding for smaller size */
-  border-radius: 6px; /* Slightly smaller radius */
+  padding: 8px 15px;
+  border-radius: 6px;
   text-decoration: none;
-  font-size: 0.9rem; /* Reduced font size */
+  font-size: 0.9rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
   margin-top: 20px;
   display: block;
-  text-align: left;
   margin-left: 10px;
   width: fit-content;
 }
 
 .project-card a:hover {
-  background-color: #4CAF50; /* Darker teal for hover effect */
+  background-color: #4CAF50;
   transform: translateY(-2px);
+}
+
+.target-audience {
+  background-color: rgba(255, 0, 0, 0.2); /* Red with slight transparency */
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-family: 'Merriweather Sans', sans-serif;
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.target-audience p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: rgb(255, 255, 255); /* Kept black for contrast, but can adjust if needed */
+  line-height: 1.4;
 }
 
 /* Disabled Link Styles */
@@ -230,6 +281,19 @@ body {
       width: 100%;
       max-width: 300px;
   }
+
+  .disclaimer {
+    width: 200px;
+    font-size: 0.85rem;
+  }
+
+  .description-box p {
+    font-size: 0.8rem;
+  }
+
+  .target-audience p {
+    font-size: 0.7rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -246,6 +310,19 @@ body {
   }
 
   .project-card a {
-      font-size: 0.8rem; /* Even smaller for mobile */
+      font-size: 0.8rem;
+  }
+
+  .disclaimer {
+    width: 180px;
+    font-size: 0.8rem;
+  }
+
+  .description-box p {
+    font-size: 0.75rem;
+  }
+
+  .target-audience p {
+    font-size: 0.65rem;
   }
 }
